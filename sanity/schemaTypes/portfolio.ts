@@ -12,10 +12,23 @@ export default {
       ],
     },
     {
+      name: 'slug',
+      type: 'slug',
+      title: 'Slug of your portfolio',
+      options: {
+        source: 'title.pl',
+      },
+    },
+    {
       name: 'tags',
       type: 'array',
       title: 'Tagi',
       of: [{type: 'string', name: 'tag', title: 'Tag'}],
+    },
+    {
+      name: 'titleImage',
+      type: 'image',
+      title: 'Miniaturka',
     },
     {
       name: 'content',
@@ -51,6 +64,18 @@ export default {
             },
             // Możesz dodać więcej typów obiektów, które mogą być wstawiane do bloków tekstu
           ],
+        },
+      ],
+    },
+    {
+      name: 'images',
+      type: 'array',
+      title: 'Zdjęcia',
+      of: [
+        {
+          name: 'image',
+          type: 'image',
+          title: 'Zdjęcie',
         },
       ],
     },

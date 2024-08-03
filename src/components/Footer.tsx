@@ -36,22 +36,38 @@ const Footer = () => {
                 <span>dariapyziakdesign@gmail.com</span>
               </a>
             </div>
-            <div className="flex gap-4 mt-10">
-              <a href="">
+            <div className="flex gap-4 mt-10 relative z-20">
+              <a
+                href="https://www.instagram.com/dariapyziakdesign/"
+                target="_blank"
+                className="cursor-pointer"
+              >
                 <LinkedinIcon />
               </a>
-              <a href="">
+              <a
+                href="https://www.instagram.com/dariapyziakdesign/"
+                target="_blank"
+                className="cursor-pointer"
+              >
                 <BehanceIcon />
               </a>
-              <a href="">
+              <a
+                href="https://www.instagram.com/dariapyziakdesign/"
+                target="_blank"
+                className="cursor-pointer"
+              >
                 <InstagramIcon />
               </a>
-              <a href="">
+              <a
+                href="https://www.instagram.com/dariapyziakdesign/"
+                target="_blank"
+                className="cursor-pointer"
+              >
                 <DribbleIcon />
               </a>
             </div>
           </div>
-          <div className="absolute top-0 left-1/2 w-[800px] h-[800px]">
+          <div className="absolute top-[70%] lg:top-0 -right-1/4 lg:left-1/2 w-[500px] lg:w-[800px] h-[400px] lg:h-[800px]">
             <Image src={gradientImg} alt="" className="w-full h-full " />
           </div>
         </div>
