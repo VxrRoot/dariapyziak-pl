@@ -1,0 +1,51 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 2px;
+  }
+
+  50% {
+    top: 12px;
+  }
+
+  100% {
+    top: 2px;
+  }
+}
+
+.scroll_down {
+  animation: scroll 2s ease infinite;
+}
+
+.gradient {
+  --size: 450px;
+  --speed: 25s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  --colorDetailsRed: #f8b200;
+  --colorDetailsBlue: #f83b00;
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+  position: absolute;
+  z-index: 9;
+  background-image: linear-gradient(
+    var(--colorDetailsRed),
+    var(--colorDetailsBlue)
+  );
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+}
