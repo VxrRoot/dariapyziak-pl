@@ -24,10 +24,10 @@
     transform: translateY(-50%) scale(1);
   }
   50% {
-    transform: translateX(40%) scale(1.3) translateY(-30%);
+    transform: translateX(100%) scale(1.3) translateY(-30%);
   }
   75% {
-    transform: translateY(-70%) scale(1);
+    transform: translateY(20%) scale(1);
   }
   100% {
     transform: translateX(0) translateY(0);
@@ -81,12 +81,12 @@
   //   var(--colorDetailsRed),
   //   var(--colorDetailsBlue)
   // );
-  animation: rotate 10s linear alternate infinite;
+  animation: rotate 20s linear alternate infinite;
   // scale 3s linear infinite;
   // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 
   @media (min-width: 720px) {
-    animation: rotateBigScreen 10s linear alternate infinite;
+    animation: rotateBigScreen 15s linear alternate infinite;
   }
 }
 

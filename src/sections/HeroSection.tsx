@@ -32,16 +32,16 @@ const HeroSection = () => {
             <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
               websites and online shops
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20">
+            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
               apps
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20">
+            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
               branding
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20">
+            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
               brand managment
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20">
+            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
               prints and packaging
             </div>
           </div>
