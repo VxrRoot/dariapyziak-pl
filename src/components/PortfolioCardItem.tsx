@@ -23,11 +23,11 @@ const PortfolioCardItem = ({ portfolioItem, paddingTop }: Props) => {
           height={500}
         />
         <div className="bg-[#252424] p-6 w-full">
-          <div className="mb-6 flex gap-4 ">
+          <div className="mb-6 flex gap-4 flex-wrap">
             {portfolioItem.tags.map((tag, idx) => (
               <div
                 key={`${tag}-${idx}`}
-                className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20"
+                className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20 whitespace-nowrap"
               >
                 {tag}
               </div>

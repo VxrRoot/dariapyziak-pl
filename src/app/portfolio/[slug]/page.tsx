@@ -1,6 +1,6 @@
 import ContainerLayout from "@/layouts/ContainerLayout";
 import { IPortfolio } from "@/lib/interface";
-import { getPortfolio } from "@/lib/query";
+import { getPortfolio, getPortfolios } from "@/lib/query";
 import { urlFor } from "@/lib/sanity";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -8,6 +8,14 @@ import Image from "next/image";
 import React from "react";
 import ArrowLeftIcon from "@/icons/ArrowLeftIcon";
 import { PortableText } from "next-sanity";
+
+export async function generateStaticParams() {
+  const portfolios = await getPortfolios();
+
+  return portfolios.map((item: IPortfolio) => ({
+    slug: item.slug.current,
+  }));
+}
 
 const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
   const portfolioData: IPortfolio[] = await getPortfolio(params.slug);
@@ -33,7 +41,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
               {portfolioItem.tags.map((tag, idx) => (
                 <div
                   key={`${tag}-${idx}`}
-                  className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20"
+                  className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20 whitespace-nowrap"
                 >
                   {tag}
                 </div>
