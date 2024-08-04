@@ -7,8 +7,6 @@ import React from "react";
 const PortfolioSection = async () => {
   const portfolios = await getPortfolios();
 
-  console.log(portfolios);
-
   return (
     <section className="py-20 bg-black text-white" id="portfolio">
       <ContainerLayout>

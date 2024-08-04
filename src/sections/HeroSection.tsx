@@ -23,7 +23,9 @@ const HeroSection = () => {
               around you
             </h1>
           </div>
-          <div className="absolute bottom-0 lg:-bottom-[30%] -left-[100%] lg:left-[200px] w-[600px] h-[600px] lg:w-[1200px] lg:h-[1200px] animate-pulse duration-2000">
+          <div
+            className={`absolute bottom-0 lg:-bottom-[30%] -left-[100%] lg:left-[200px] w-[600px] h-[600px] lg:w-[1200px] lg:h-[1200px]  ${styles.gradient}`}
+          >
             <Image src={gradientImg} alt="" className="w-full h-full " />
           </div>
           <div className="flex flex-wrap text-sm lg:text-base gap-2 justify-center mt-4 lg:mt-8 z-20 relative">

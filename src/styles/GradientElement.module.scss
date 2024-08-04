@@ -1,11 +1,52 @@
-@keyframes rotate {
+@keyframes rotateBigScreen {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(5%) scale(1.5);
+  }
+  25% {
+    transform: translateY(-20%) scale(1);
+  }
+  50% {
+    transform: translateX(-10%) scale(1.5);
+  }
+  75% {
+    transform: translateY(20%) scale(1);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(0) translateY(0);
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: translateX(25%) scale(1.3);
+  }
+  25% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(40%) scale(1.3) translateY(-30%);
+  }
+  75% {
+    transform: translateY(-70%) scale(1);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+// @keyframes scale {
+//   0% {
+//     transform: scale(1);
+//   }
+
+//   50% {
+//     transform: scale(1.5);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }
 
 @keyframes scroll {
   0% {
@@ -26,22 +67,27 @@
 }
 
 .gradient {
-  --size: 450px;
-  --speed: 25s;
-  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-  --colorDetailsRed: #f8b200;
-  --colorDetailsBlue: #f83b00;
-  width: var(--size);
-  height: var(--size);
-  filter: blur(calc(var(--size) / 5));
-  position: absolute;
-  z-index: 9;
-  background-image: linear-gradient(
-    var(--colorDetailsRed),
-    var(--colorDetailsBlue)
-  );
-  animation: rotate var(--speed) var(--easing) alternate infinite;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  // --size: 450px;
+  // --speed: 25s;
+  // --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  // --colorDetailsRed: #f8b200;
+  // --colorDetailsBlue: #f83b00;
+  // width: var(--size);
+  // height: var(--size);
+  // filter: blur(calc(var(--size) / 5));
+  // position: absolute;
+  // z-index: 9;
+  // background-image: linear-gradient(
+  //   var(--colorDetailsRed),
+  //   var(--colorDetailsBlue)
+  // );
+  animation: rotate 10s linear alternate infinite;
+  // scale 3s linear infinite;
+  // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  @media (min-width: 720px) {
+    animation: rotateBigScreen 10s linear alternate infinite;
+  }
 }
 
 @media (min-width: 720px) {

@@ -9,6 +9,8 @@ import React from "react";
 import ArrowLeftIcon from "@/icons/ArrowLeftIcon";
 import { PortableText } from "next-sanity";
 
+export const revalidate = 30;
+
 export async function generateStaticParams() {
   const portfolios = await getPortfolios();
 
