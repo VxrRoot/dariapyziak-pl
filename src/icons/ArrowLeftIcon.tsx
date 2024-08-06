@@ -9,12 +9,12 @@ const ArrowLeftIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     >
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
+      <path d="M6 8L2 12L6 16" />
+      <path d="M2 12H22" />
     </svg>
   );
 };

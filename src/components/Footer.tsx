@@ -27,25 +27,28 @@ const Footer = () => {
               </p>
             </div>
             <div className="mt-8">
-              <a className="flex gap-4 items-center" href="">
+              <a className="flex gap-4 items-center" href="tel:48510010903">
                 <PhoneIcon />
                 <span>+48 510 010 903</span>
               </a>
-              <a className="flex gap-4 mt-2 items-center" href="">
+              <a
+                className="flex gap-4 mt-2 items-center"
+                href="mailto:dariapyziakdesign@gmail.com"
+              >
                 <MailIcon />
                 <span>dariapyziakdesign@gmail.com</span>
               </a>
             </div>
             <div className="flex gap-4 mt-10 relative z-20">
               <a
-                href="https://www.instagram.com/dariapyziakdesign/"
+                href="https://www.linkedin.com/in/daria-pyziak-29081b1a6/"
                 target="_blank"
                 className="cursor-pointer"
               >
                 <LinkedinIcon />
               </a>
               <a
-                href="https://www.instagram.com/dariapyziakdesign/"
+                href="https://www.behance.net/dariapyziakdesign"
                 target="_blank"
                 className="cursor-pointer"
               >
@@ -59,7 +62,7 @@ const Footer = () => {
                 <InstagramIcon />
               </a>
               <a
-                href="https://www.instagram.com/dariapyziakdesign/"
+                href="https://dribbble.com/dariapyziakdesign"
                 target="_blank"
                 className="cursor-pointer"
               >

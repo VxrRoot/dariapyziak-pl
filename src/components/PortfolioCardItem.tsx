@@ -1,5 +1,6 @@
 import { IPortfolio } from "@/lib/interface";
 import { urlFor } from "@/lib/sanity";
+import styles from "../styles/PortfolioCardItem.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -13,16 +14,16 @@ const PortfolioCardItem = ({ portfolioItem, paddingTop }: Props) => {
   return (
     <Link href={`/portfolio/${portfolioItem.slug.current}`}>
       <div
-        className={`${paddingTop ? "md:pt-20" : ""} mx-auto flex rounded-md overflow-hidden flex-col justify-center items-center w-full max-w-[548px]`}
+        className={`${paddingTop ? "md:mt-20" : ""} mx-auto flex rounded-md overflow-hidden flex-col bg-[#252424] justify-center items-center w-full max-w-[548px] ${styles.wrapper}`}
       >
         <Image
           src={urlFor(portfolioItem.titleImage).url()}
           alt=""
-          className="w-full bg-cover bg-center"
+          className={`w-full bg-cover bg-center ${styles.image}`}
           width={500}
           height={500}
         />
-        <div className="bg-[#252424] p-6 w-full">
+        <div className=" p-6 w-full">
           <div className="mb-6 flex gap-4 flex-wrap">
             {portfolioItem.tags.map((tag, idx) => (
               <div

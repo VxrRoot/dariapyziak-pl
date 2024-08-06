@@ -1,0 +1,9 @@
+.contact_button {
+  &:hover .scroll_element {
+    display: flex;
+  }
+
+  &:hover .static_element {
+    display: none;
+  }
+}

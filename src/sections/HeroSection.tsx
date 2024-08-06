@@ -29,19 +29,19 @@ const HeroSection = () => {
             <Image src={gradientImg} alt="" className="w-full h-full " />
           </div>
           <div className="flex flex-wrap text-sm lg:text-base gap-2 justify-center mt-4 lg:mt-8 z-20 relative">
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
+            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               websites and online shops
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
+            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               apps
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
+            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               branding
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
+            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               brand managment
             </div>
-            <div className="rounded-full border w-fit py-2 px-6 lg:px-8 border-black/20 bg-black/5">
+            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               prints and packaging
             </div>
           </div>

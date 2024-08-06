@@ -1,0 +1,17 @@
+.wrapper {
+  transition: all;
+  transition-duration: 0.2s;
+
+  .image {
+    transition: transform;
+    transition-duration: 500ms;
+  }
+
+  &:hover {
+    background-color: #363535;
+
+    .image {
+      transform: scale(1.025);
+    }
+  }
+}

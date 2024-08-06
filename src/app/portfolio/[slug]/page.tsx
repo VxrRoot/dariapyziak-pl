@@ -27,8 +27,8 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
   const portfolioItem = portfolioData[0];
 
   return (
-    <main className="text-white pt-[10rem] bg-black">
-      <div className="px-0 h-full w-full mx-auto md:px-6 lg:px-16 max-w-[1440px]">
+    <main className="text-white  pt-[10rem] bg-black">
+      <div className="px-0 h-full  w-full mx-auto md:px-6 lg:px-16 max-w-[1440px]">
         <div className="mb-6 px-5 md:px-0">
           <Link
             href="/"
@@ -37,8 +37,8 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
             <ArrowLeftIcon /> Powrót
           </Link>
         </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="flex-1 px-5 md:px-0 md:pr-4">
+        <div className="flex flex-col md:flex-row relative">
+          <div className="flex-1 px-5 md:px-0 md:pr-4 md:sticky h-fit md:top-4">
             <div className="mb-6 flex gap-4 ">
               {portfolioItem.tags.map((tag, idx) => (
                 <div
@@ -49,7 +49,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
                 </div>
               ))}
             </div>
-            <h1 className="text-[2.5rem] lg:text-6xl font-bold">
+            <h1 className="text-4xl lg:text-6xl font-bold">
               {portfolioItem.title.pl}
             </h1>
             <div className="mt-8 prose  max-w-5xl prose-invert prose-lg w-full mx-auto flex flex-col">
