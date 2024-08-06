@@ -31,6 +31,11 @@ export default {
       title: 'Miniaturka',
     },
     {
+      name: 'public',
+      type: 'boolean',
+      title: 'Publiczne',
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Opis',

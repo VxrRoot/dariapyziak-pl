@@ -8,7 +8,8 @@ export async function getPortfolios() {
             tags,
             titleImage,
             content,
-            images
+            images,
+            public
           }`;
 
   // @ts-ignore
@@ -25,7 +26,8 @@ export async function getPortfolio(slug: string) {
     tags,
     titleImage,
     content,
-    images
+    images,
+    public
   }`;
 
   // @ts-ignore

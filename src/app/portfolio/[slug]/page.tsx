@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
   const portfolioData: IPortfolio[] = await getPortfolio(params.slug);
 
-  if (!portfolioData) notFound();
+  if (!portfolioData[0]) notFound();
 
   const portfolioItem = portfolioData[0];
 
@@ -40,7 +40,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
         <div className="flex flex-col md:flex-row relative">
           <div className="flex-1 px-5 md:px-0 md:pr-4 md:sticky h-fit md:top-4">
             <div className="mb-6 flex gap-4 ">
-              {portfolioItem.tags.map((tag, idx) => (
+              {portfolioItem?.tags?.map((tag, idx) => (
                 <div
                   key={`${tag}-${idx}`}
                   className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20 whitespace-nowrap"
@@ -50,14 +50,14 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
               ))}
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold">
-              {portfolioItem.title.pl}
+              {portfolioItem?.title.pl}
             </h1>
             <div className="mt-8 prose  max-w-5xl prose-invert prose-lg w-full mx-auto flex flex-col">
-              <PortableText value={portfolioItem.content} />
+              <PortableText value={portfolioItem?.content} />
             </div>
           </div>
           <div className="flex-1 mt-16 md:mt-0 items-center md:justify-end md:items-end flex flex-col">
-            {portfolioItem.images.map((img, idx) => (
+            {portfolioItem?.images.map((img, idx) => (
               <Image
                 key={idx}
                 src={urlFor(img).url()}

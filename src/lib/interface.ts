@@ -8,6 +8,7 @@ export interface IPortfolio {
   slug: {
     current: string;
   };
+  public?: boolean;
   images: any[];
   titleImage: any;
   content: any;
