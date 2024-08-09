@@ -1,7 +1,8 @@
 import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {StructureBuilder, structureTool} from 'sanity/structure'
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 export default defineConfig({
   name: 'default',
@@ -10,7 +11,15 @@ export default defineConfig({
   projectId: 'zykjz4cb',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Base')
+          .items([...S.documentTypeListItems().reverse()]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,

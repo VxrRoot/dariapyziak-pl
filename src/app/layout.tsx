@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   title: "Daria Pyziak - UX/UI Designer & Brand Designer",
   description:
     "Daria Pyziak UX/UI Designer & Brand Designer, strony internetowe, sklepy internetowe, aplikacje, branding, brand managment",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

@@ -16,7 +16,7 @@ export default {
       type: 'slug',
       title: 'Slug of your portfolio',
       options: {
-        source: 'title.pl',
+        source: 'title.en',
       },
     },
     {
