@@ -25,7 +25,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
   const portfolioItem = portfolioData[0];
 
   return (
-    <main className="text-white  pt-[10rem] bg-black">
+    <main className="text-white pt-[10rem] bg-black">
       <div className="px-0 h-full  w-full mx-auto md:px-6 lg:px-16 max-w-[1440px]">
         <div className="mb-6 px-5 md:px-0">
           <Link
@@ -37,7 +37,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
         </div>
         <div className="flex flex-col md:flex-row relative">
           <div className="flex-1 px-5 md:px-0 md:pr-4 md:sticky h-fit md:top-4">
-            <div className="mb-6 flex gap-4 ">
+            <div className="mb-6 flex gap-4 flex-wrap w-full">
               {portfolioItem?.tags?.map((tag, idx) => (
                 <div
                   key={`${tag}-${idx}`}

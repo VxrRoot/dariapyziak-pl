@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  openGraph: {
+    title: "Daria Pyziak Design - Portfolio Projekty graficzne",
+    description:
+      "Zaprojektujmy Twoją markę. Branding. Logo. Strony internetowe. Aplikacje. Materiały drukowane. Grafiki.",
+  },
 };
 
 export default function RootLayout({
