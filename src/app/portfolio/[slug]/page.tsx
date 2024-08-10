@@ -50,7 +50,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
             <h1 className="text-4xl lg:text-6xl font-bold">
               {portfolioItem?.title.pl}
             </h1>
-            <div className="mt-8 prose  max-w-5xl prose-invert prose-lg w-full mx-auto flex flex-col">
+            <div className="mt-8 prose  max-w-5xl prose-invert text-[#c4c4c4] font-light prose-lg w-full mx-auto flex flex-col">
               <PortableText value={portfolioItem?.content} />
             </div>
           </div>
