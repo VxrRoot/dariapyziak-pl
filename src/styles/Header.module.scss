@@ -1,9 +1,29 @@
-.contact_button {
-  &:hover .scroll_element {
-    display: flex;
+@keyframes scroll-one {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-  &:hover .static_element {
-    display: none;
+.marquee_box_one {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // margin: 3em 0 0 0;
+
+  &:hover {
+    .marquee_content_one {
+      animation-play-state: paused;
+    }
   }
+}
+.marquee_content_one {
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+  animation: scroll-one 20s linear infinite;
 }

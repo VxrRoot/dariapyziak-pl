@@ -1,13 +1,11 @@
-import ContainerLayout from "@/layouts/ContainerLayout";
+import ArrowLeftIcon from "@/icons/ArrowLeftIcon";
 import { IPortfolio } from "@/lib/interface";
 import { getPortfolio, getPortfolios } from "@/lib/query";
 import { urlFor } from "@/lib/sanity";
+import { PortableText } from "next-sanity";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Image from "next/image";
-import React from "react";
-import ArrowLeftIcon from "@/icons/ArrowLeftIcon";
-import { PortableText } from "next-sanity";
 
 export const revalidate = 30;
 
@@ -31,10 +29,10 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
       <div className="px-0 h-full  w-full mx-auto md:px-6 lg:px-16 max-w-[1440px]">
         <div className="mb-6 px-5 md:px-0">
           <Link
-            href="/"
-            className="text-sm text-[#F9F7F4]/50 flex items-center gap-2"
+            href="/#portfolio"
+            className="text-sm text-[#F9F7F4]/60 flex items-center gap-2"
           >
-            <ArrowLeftIcon /> Powrót
+            <ArrowLeftIcon /> <span className="pt-0.5">Powrót</span>
           </Link>
         </div>
         <div className="flex flex-col md:flex-row relative">
@@ -64,7 +62,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
                 alt=""
                 width={500}
                 height={500}
-                className="md:w-[548px] h-auto"
+                className="md:w-[548px] h-auto block m-0"
               />
             ))}
           </div>

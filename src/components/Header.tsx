@@ -29,23 +29,62 @@ const Header = () => {
               Portfolio
             </Link>
             <Link
-              className={`uppercase font-semibold text-sm cursor-pointer ${isPortfolioPage ? "bg-transparent border-white/80" : "bg-[#F1EBE3] border-black/50"} border  rounded-full   h-[44px] ml-4 lg:ml-16 flex items-center overflow-hidden max-w-[130px] lg:max-w-[180px] contact-button ${styles.contact_button}`}
+              className={`uppercase flex gap-2 font-semibold text-sm cursor-pointer ${isPortfolioPage ? "bg-transparent border-white/80" : "bg-transparent border-black/50"} border  rounded-full  h-[44px] ml-4 lg:ml-16 flex items-center overflow-hidden w-[130px] lg:w-[180px] contact-button`}
               href="/#kontakt"
             >
-              <div
-                className={`bg-black h-full text-white gap-4 items-center hover:animate-loop-scroll -ml-10 hidden scroll-element ${styles.scroll_element}`}
-              >
-                <span className="whitespace-nowrap">Contact Me</span>
-                <span className="whitespace-nowrap">Contact Me</span>
-                <span className="whitespace-nowrap">Contact Me</span>
-                <span className="whitespace-nowrap">Contact Me</span>
-                <span className="whitespace-nowrap">Contact Me</span>
-                <span className="whitespace-nowrap">Contact Me</span>
-              </div>
-              <div
-                className={`pt-0.5 w-[130px] lg:w-[180px] text-center block ${styles.static_element}`}
-              >
-                Contact Me
+              <div className={styles.marquee_box_one}>
+                <div className={styles.marquee_content_one}>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                </div>
+                <div className={styles.marquee_content_one}>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                  <span className="whitespace-nowrap h-full  pt-1">
+                    CONTACT ME
+                  </span>
+                </div>
               </div>
             </Link>
           </div>

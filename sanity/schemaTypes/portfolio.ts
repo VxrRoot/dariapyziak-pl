@@ -20,6 +20,11 @@ export default {
       },
     },
     {
+      name: 'order',
+      type: 'number',
+      title: 'Order',
+    },
+    {
       name: 'tags',
       type: 'array',
       title: 'Tagi',
@@ -85,4 +90,11 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: 'title.pl',
+      subtitle: 'order',
+      media: 'titleImage',
+    },
+  },
 }

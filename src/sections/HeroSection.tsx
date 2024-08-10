@@ -39,7 +39,7 @@ const HeroSection = () => {
               branding
             </div>
             <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              brand managment
+              brand management
             </div>
             <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
               prints and packaging

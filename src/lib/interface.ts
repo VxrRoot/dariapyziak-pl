@@ -9,6 +9,7 @@ export interface IPortfolio {
     current: string;
   };
   public?: boolean;
+  order: number;
   images: any[];
   titleImage: any;
   content: any;

@@ -8,6 +8,7 @@ export async function getPortfolios() {
             tags,
             titleImage,
             content,
+            order,
             images,
             public
           }`;

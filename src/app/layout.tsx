@@ -8,12 +8,12 @@ import "./globals.css";
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Daria Pyziak - UX/UI Designer & Brand Designer",
+  title: "Daria Pyziak Design - Portfolio Projekty graficzne",
   description:
-    "Daria Pyziak UX/UI Designer & Brand Designer, strony internetowe, sklepy internetowe, aplikacje, branding, brand managment",
+    "Zaprojektujmy Twoją markę. Branding. Logo. Strony internetowe. Aplikacje. Materiały drukowane. Grafiki.",
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
