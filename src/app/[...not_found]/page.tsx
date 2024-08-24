@@ -11,7 +11,11 @@ export default function NotFound() {
     <main className="">
       <ContainerLayout>
         <div className="flex-col w-full flex justify-center items-center h-[80vh]">
-          <span className={`${bowbly.className} text-6xl`}>404 Not FOUND</span>{" "}
+          <span
+            className={`${bowbly.className} text-4xl lg:text-6xl text-center`}
+          >
+            404 Not FOUND
+          </span>{" "}
           <br />
           <Link
             className={`uppercase font-semibold text-sm cursor-pointer bg-[#F1EBE3] border-black/50 border  rounded-full   h-[44px] flex items-center overflow-hidden max-w-[130px] lg:max-w-[180px] contact-button ${styles.contact_button}`}
