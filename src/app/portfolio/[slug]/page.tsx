@@ -32,7 +32,7 @@ const PortfolioPage = async ({ params }: { params: { slug: string } }) => {
             href="/#portfolio"
             className="text-sm text-[#F9F7F4]/60 flex items-center gap-2"
           >
-            <ArrowLeftIcon /> <span className="pt-0.5">Powrót</span>
+            <ArrowLeftIcon /> <span className="pt-0.5">Back</span>
           </Link>
         </div>
         <div className="flex flex-col md:flex-row relative">
