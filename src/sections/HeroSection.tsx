@@ -1,57 +1,75 @@
 import ContainerLayout from "@/layouts/ContainerLayout";
+import { useTranslations } from "next-intl";
 import { Bowlby_One_SC } from "next/font/google";
-import styles from "../styles/GradientElement.module.scss";
-import gradientImg from "../../public/GRADIENT.svg";
 import Image from "next/image";
-import React from "react";
-import GradientElement from "@/icons/GradientElement";
+import gradientImg from "../../public/GRADIENT.svg";
+import BigLogo from "@/icons/BigLogo";
 
 const bowbly = Bowlby_One_SC({ subsets: ["latin"], weight: ["400"] });
 
 const HeroSection = () => {
+  const t = useTranslations();
+
+  const items = [
+    t("services.uxui"),
+    "dot",
+    t("services.ecommerce"),
+    "dot",
+    t("services.appDesign"),
+    "dot",
+    t("services.webDesign"),
+    "dot",
+    t("services.branding"),
+    "dot",
+    t("services.brandManagment"),
+    "dot",
+    t("services.prints"),
+    "dot",
+    t("services.socialMedia"),
+  ];
+
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden bg-[#F9F7F4]">
       <ContainerLayout>
-        <div className="relative h-full w-full pt-[10rem] pb-[10rem] min-h-[800px]  ">
-          <div className="relative z-20">
-            <div className="text-center text-base mb-8 tracking-wide">
-              HI I’M DARIA PYZIAK!
-            </div>
-            <h1 className="text-5xl font-semibold uppercase text-center tracking-wide lg:text-[100px]">
-              Design is <br />
-              <span className={`${bowbly.className}`}>everything</span> <br />
-              around you
-            </h1>
-          </div>
+        <div className="relative h-full w-full pt-[10rem]  min-h-[800px]  flex flex-col justify-end">
           <div
-            className={`absolute bottom-0 lg:-bottom-[30%] -left-[100%] lg:left-[200px] w-[600px] h-[600px] lg:w-[1200px] lg:h-[1200px]  ${styles.gradient}`}
+            // className={`absolute bottom-0 lg:-bottom-[30%] -left-[100%] lg:left-[200px] w-[600px] h-[600px] lg:w-[1200px] lg:h-[1200px]  ${styles.gradient}`}
+            className={`absolute -right-[600px] -bottom-[500px] w-[600px] h-[600px] lg:w-[1600px] lg:h-[1600px]  `}
           >
             <Image src={gradientImg} alt="" className="w-full h-full " />
           </div>
-          <div className="flex flex-wrap text-sm lg:text-base gap-2 justify-center mt-4 lg:mt-8 z-20 relative">
-            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              websites and online shops
+          <div className="flex flex-col justify-end relative">
+            <div className="mb-10">
+              <BigLogo darkColor={false} />
             </div>
-            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              apps
-            </div>
-            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              branding
-            </div>
-            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              brand management
-            </div>
-            <div className="rounded-full border w-fit pt-2 pb-[6px] px-4 border-black/20 bg-black/5 text-xs h-fit">
-              prints and packaging
-            </div>
-          </div>
-          <div className="w-[18px] h-[26px] border-2 rounded-lg border-black mx-auto mt-20 z-30 absolute left-1/2 bottom-[120px] flex justify-center">
-            <div
-              className={`w-0.5 h-2 bg-black rounded-full absolute top-1 ${styles.scroll_down}`}
+            <h1
+              className=" text-4xl lg:text-[71px] font-semibold leading-tight"
+              dangerouslySetInnerHTML={{ __html: t("heroTitle") }}
             />
           </div>
         </div>
       </ContainerLayout>
+      <div className="border-b border-gray-500/10 border-t py-6 mb-20 mt-8">
+        <ContainerLayout>
+          <div className="flex justify-between items-center">
+            {items.map((item, idx) => {
+              if (item === "dot")
+                return (
+                  <div
+                    key={idx}
+                    className="w-[5px] h-[5px] bg-black rounded-full"
+                  />
+                );
+
+              return (
+                <div key={idx} className="text-[18px]">
+                  {item}
+                </div>
+              );
+            })}
+          </div>
+        </ContainerLayout>
+      </div>
     </section>
   );
 };
