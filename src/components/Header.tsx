@@ -21,7 +21,7 @@ const Header = () => {
     >
       <ContainerLayout>
         <div
-          className={`flex  items-center ${isPortfolioPage ? "justify-between" : "justify-end"}`}
+          className={`flex items-center ${isPortfolioPage ? "justify-between" : "justify-end"}`}
         >
           {isPortfolioPage && (
             <Link href="/">
