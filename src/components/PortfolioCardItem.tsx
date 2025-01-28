@@ -4,6 +4,7 @@ import styles from "../styles/PortfolioCardItem.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useLocale } from "next-intl";
 
 interface Props {
   portfolioItem: IPortfolio;
@@ -11,10 +12,14 @@ interface Props {
 }
 
 const PortfolioCardItem = ({ portfolioItem, paddingTop }: Props) => {
+  const locale = useLocale();
+
+  const selectedLang = locale === "pl" ? "pl" : "en";
+
   return (
-    <Link href={`/portfolio/${portfolioItem.slug.current}`}>
+    <Link href={`${locale}/portfolio/${portfolioItem.slug.current}`}>
       <div
-        className={`${paddingTop ? "md:mt-20" : ""} mx-auto flex rounded-md overflow-hidden flex-col bg-[#252424] justify-center items-center w-full max-w-[548px] ${styles.wrapper}`}
+        className={`${paddingTop ? "md:mt-20" : ""} mx-auto flex rounded-md overflow-hidden flex-col bg-[#252424] justify-center items-center w-full  ${styles.wrapper}`}
       >
         <Image
           src={urlFor(portfolioItem.titleImage).url()}
@@ -25,7 +30,7 @@ const PortfolioCardItem = ({ portfolioItem, paddingTop }: Props) => {
         />
         <div className=" p-6 w-full">
           <div className="mb-6 flex gap-4 flex-wrap">
-            {portfolioItem.tags.map((tag, idx) => (
+            {portfolioItem.tags[selectedLang].map((tag, idx) => (
               <div
                 key={`${tag}-${idx}`}
                 className="bg-[#F9F7F4]/10 pt-2 pb-[6px] px-4 text-[#F9F7F4] text-xs rounded-full border border-[#F9F7F4]/20 whitespace-nowrap"
@@ -34,7 +39,9 @@ const PortfolioCardItem = ({ portfolioItem, paddingTop }: Props) => {
               </div>
             ))}
           </div>
-          <p className="font-bold text-2xl">{portfolioItem.title.pl}</p>
+          <p className="font-bold text-2xl">
+            {portfolioItem.title[selectedLang]}
+          </p>
         </div>
       </div>
     </Link>

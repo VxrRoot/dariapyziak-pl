@@ -15,5 +15,8 @@
     "brandManagment": "Brand Management",
     "prints": "Prints",
     "socialMedia": "Social Media"
+  },
+  "aboutMe": {
+    "seeMoreOnLinkedin": "See my Linkedin for more"
   }
 }

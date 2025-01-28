@@ -18,7 +18,6 @@ export default function LocaleSwitcherSelect() {
       { locale: locale }
     );
   }
-  console.log(params.locale);
 
   return (
     <div className="flex space-x-2">

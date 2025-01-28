@@ -12,7 +12,10 @@ import BehanceIcon from "@/icons/BehanceIcon";
 
 const Footer = () => {
   return (
-    <footer id="kontakt" className="bg-black text-white py-24 overflow-hidden">
+    <footer
+      id="kontakt"
+      className="bg-black text-white py-24 overflow-hidden relative z-10"
+    >
       <ContainerLayout>
         <div className="w-full relative">
           <div className="flex flex-col">
