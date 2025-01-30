@@ -13,7 +13,7 @@ export default {
       type: 'slug',
       title: 'Slug of your portfolio',
       options: {
-        source: (doc) => doc.title?.en || 'default-slug',
+        source: (doc: any) => doc.title?.en || 'default-slug',
       },
     },
     {

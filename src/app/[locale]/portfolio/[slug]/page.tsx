@@ -1,9 +1,14 @@
-import StickyProjectDescription from "@/components/StickyProjectDescription";
 import { IPortfolio } from "@/lib/interface";
 import { getPortfolio, getPortfolios } from "@/lib/query";
 import { urlFor } from "@/lib/sanity";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+
+const StickyProjectDescription = dynamic(
+  () => import("@/components/StickyProjectDescription"),
+  { ssr: false }
+);
 
 export const revalidate = 30;
 
