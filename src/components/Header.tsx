@@ -88,13 +88,26 @@ const Header = () => {
               }
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <NavButton href="/" text={t("nav.home")} />
-              <NavButton href="/#portfolio" text={t("nav.portfolio")} />
+              <NavButton
+                href="/"
+                text={t("nav.home")}
+                onClick={() => setMenuOpen(false)}
+              />
+              <NavButton
+                href="/#portfolio"
+                text={t("nav.portfolio")}
+                onClick={() => setMenuOpen(false)}
+              />
               <NavButton
                 href={locale === "pl" ? "/pl/o-mnie" : "/en/about-me"}
                 text={t("nav.about")}
+                onClick={() => setMenuOpen(false)}
               />
-              <NavButton href="/portfolio" text={t("nav.contact")} />
+              <NavButton
+                href="/portfolio"
+                text={t("nav.contact")}
+                onClick={() => setMenuOpen(false)}
+              />
               <LanguageSwitcher />
             </motion.div>
           </div>

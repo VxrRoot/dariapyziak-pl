@@ -1,11 +1,20 @@
 import Link from "next/link";
 import React from "react";
 
-const AnimatedButton = ({ href, text }: { href: string; text: string }) => {
+const AnimatedButton = ({
+  href,
+  text,
+  onClick,
+}: {
+  href: string;
+  text: string;
+  onClick?: () => void;
+}) => {
   return (
     <Link
       href={href}
       className="relative inline-block overflow-hidden rounded-lg group text-[14px] px-2"
+      onClick={onClick}
     >
       <span className="relative block  font-semibold transition-transform duration-300 ease-in-out translate-y-0 group-hover:-translate-y-full ">
         {text}
