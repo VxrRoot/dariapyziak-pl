@@ -13,11 +13,21 @@ const StickyProjectDescription = dynamic(
 export const revalidate = 30;
 
 export async function generateStaticParams() {
-  const portfolios = await getPortfolios();
+  const portfolios: IPortfolio[] = await getPortfolios();
+  const locales = ["en", "pl"]; // 🔥 Upewniamy się, że uwzględniamy oba języki
 
-  return portfolios.map((item: IPortfolio) => ({
-    slug: item.slug.current,
-  }));
+  if (!portfolios || portfolios.length === 0) return [];
+
+  const paths = portfolios
+    .filter((item) => item?.slug?.current)
+    .flatMap((item) =>
+      locales.map((locale) => ({
+        slug: item.slug.current,
+        locale, // 🔥 Dodajemy `locale` do URL
+      }))
+    );
+
+  return paths;
 }
 
 type IPortfolioWithCustomTags = Omit<IPortfolio, "tags"> & {
@@ -37,15 +47,12 @@ const PortfolioPage = async ({
 
   if (!portfolioData[0]) notFound();
 
-  const selectedLang = params.locale === "pl" ? "pl" : "en";
-
   const portfolioItem = portfolioData[0];
 
   return (
     <main className="text-white pt-[64px] bg-black">
       <div className="px-0 h-full  w-full mx-auto  ">
         <div className="flex flex-col md:flex-row spacex  relative">
-          {/* Sticky Text Section */}
           <div className="relative flex-1 flex  justify-end">
             <StickyProjectDescription
               content={portfolioItem.content}
@@ -54,7 +61,6 @@ const PortfolioPage = async ({
             />
           </div>
 
-          {/* Images Section */}
           <div className="flex-1 mt-16 md:mt-0 items-center md:justify-end md:items-end flex  flex-col">
             {portfolioItem?.images.map((img, idx) => (
               <Image

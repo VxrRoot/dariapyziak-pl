@@ -26,7 +26,7 @@ const Header = () => {
     <header
       className={` bg-transparent   absolute w-full z-20 ${
         !isHomePage ? "text-white border-white/15 " : "border-gray-500/10"
-      } border-b ${isAboutMePage && "text-black border-black/5"}`}
+      } border-b ${isAboutMePage && "!text-black !border-black/5"}`}
     >
       <ContainerLayout>
         <div
