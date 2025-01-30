@@ -32,6 +32,7 @@ const HeroSection = () => {
     t("services.prints"),
     "dot",
     t("services.socialMedia"),
+    "dot",
   ];
 
   return (
@@ -67,7 +68,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </ContainerLayout>
-      <div className="h-44">
+      <div className="h-44 relative z-10">
         <HeroScrollingItems items={items} />
       </div>
     </section>
