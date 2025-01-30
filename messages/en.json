@@ -1,0 +1,22 @@
+{
+  "heroTitle": "Rising your brand <br /> by thoughtful design",
+  "nav": {
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home"
+  },
+  "services": {
+    "uxui": "UX/UI Design",
+    "ecommerce": "E-commerce",
+    "appDesign": "App Design",
+    "webDesign": "Web Design",
+    "branding": "Branding",
+    "brandManagment": "Brand Management",
+    "prints": "Prints",
+    "socialMedia": "Social Media"
+  },
+  "aboutMe": {
+    "seeMoreOnLinkedin": "See my Linkedin for more"
+  }
+}

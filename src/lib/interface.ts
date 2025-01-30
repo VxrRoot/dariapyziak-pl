@@ -1,6 +1,6 @@
 export interface IPortfolio {
   _id: string;
-  tags: string[];
+  tags: { en: string[]; pl: string[] };
   title: {
     en: string;
     pl: string;

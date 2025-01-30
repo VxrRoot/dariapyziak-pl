@@ -1,0 +1,22 @@
+{
+  "heroTitle": "Wzrost marki dzięki <br /> przemyślanemu projektowi",
+  "nav": {
+    "portfolio": "Portfolio",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "home": "Strona Główna"
+  },
+  "services": {
+    "uxui": "UX/UI Design",
+    "ecommerce": "E-commerce",
+    "appDesign": "Projekt aplikacji",
+    "webDesign": "Web Design",
+    "branding": "Branding",
+    "brandManagment": "Brand Management",
+    "prints": "Prints",
+    "socialMedia": "Social Media"
+  },
+  "aboutMe": {
+    "seeMoreOnLinkedin": "Zobacz więcej na Linkedin"
+  }
+}

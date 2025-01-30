@@ -5,18 +5,15 @@ export default {
   fields: [
     {
       name: 'title',
-      type: 'object',
-      fields: [
-        {name: 'pl', type: 'string', title: 'Tytuł (Pl)'},
-        {name: 'en', type: 'string', title: 'Tytuł (EN)'},
-      ],
+      type: 'localeString', // Wielojęzyczny tytuł
+      title: 'Tytuł',
     },
     {
       name: 'slug',
       type: 'slug',
       title: 'Slug of your portfolio',
       options: {
-        source: 'title.en',
+        source: (doc) => doc.title?.en || 'default-slug',
       },
     },
     {
@@ -26,14 +23,20 @@ export default {
     },
     {
       name: 'tags',
-      type: 'array',
+      type: 'localeArray', // Wielojęzyczne tagi
       title: 'Tagi',
-      of: [{type: 'string', name: 'tag', title: 'Tag'}],
     },
     {
       name: 'titleImage',
       type: 'image',
       title: 'Miniaturka',
+      fields: [
+        {
+          name: 'alt',
+          type: 'localeString', // Wielojęzyczny tekst alternatywny
+          title: 'Tekst alternatywny',
+        },
+      ],
     },
     {
       name: 'public',
@@ -42,38 +45,20 @@ export default {
     },
     {
       name: 'content',
-      type: 'array',
+      type: 'object', // Zmiana z array na object
       title: 'Opis',
-      of: [
+      fields: [
         {
-          type: 'block',
-          of: [
-            {
-              type: 'image',
-              options: {hotspot: true}, // Opcjonalnie, włącz hotspoty dla większej kontroli nad kadrowaniem obrazów
-              fields: [
-                {
-                  name: 'caption',
-                  type: 'string',
-                  title: 'Caption',
-                  options: {
-                    isHighlighted: true, // Opcja ta wyróżnia pole w UI, kiedy obraz jest wybrany
-                  },
-                },
-                {
-                  // Możesz dodać więcej pól związanych z obrazem, np. alt tekst
-                  name: 'alt',
-                  type: 'string',
-                  title: 'Tekst alternatywny',
-                  description: 'Tekst alternatywny dla obrazu, ważny dla SEO i dostępności',
-                  options: {
-                    isHighlighted: true,
-                  },
-                },
-              ],
-            },
-            // Możesz dodać więcej typów obiektów, które mogą być wstawiane do bloków tekstu
-          ],
+          name: 'pl',
+          type: 'array',
+          title: 'Polski opis',
+          of: [{type: 'block'}], // Treść w języku polskim
+        },
+        {
+          name: 'en',
+          type: 'array',
+          title: 'Angielski opis',
+          of: [{type: 'block'}], // Treść w języku angielskim
         },
       ],
     },
@@ -86,6 +71,13 @@ export default {
           name: 'image',
           type: 'image',
           title: 'Zdjęcie',
+          fields: [
+            {
+              name: 'caption',
+              type: 'localeString', // Wielojęzyczne podpisy zdjęć
+              title: 'Podpis',
+            },
+          ],
         },
       ],
     },
