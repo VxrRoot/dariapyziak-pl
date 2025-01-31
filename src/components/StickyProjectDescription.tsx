@@ -61,7 +61,7 @@ const StickyProjectDescription: FC<StickyProjectDescriptionProps> = ({
       <h1 className="text-4xl lg:text-[40px] lg:leading-tight font-semibold mt-6 mb-[42px]">
         {title}
       </h1>
-      <div className=" prose max-w-5xl !m-0 !p-0 [&>h6]:mb-3 [&>h6]:mt-6 [&>h6]:opacity-50 prose-invert text-[#c4c4c4] font-light prose-lg [&>ul]:my-6  mx-auto flex flex-col [&>ul]:list-disc [&>ul]:list-outside [&>ul>li]:ml-4">
+      <div className=" prose max-w-5xl !m-0 max-sm:!p-0 [&>h6]:mb-3 [&>h6]:mt-6 [&>h6]:opacity-50 prose-invert text-[#c4c4c4] font-light text-[13px] [&>ul]:my-6  mx-auto flex flex-col [&>ul]:list-disc [&>ul]:list-outside [&>ul>li]:ml-4 pr-20">
         <PortableText
           value={content}
           components={{

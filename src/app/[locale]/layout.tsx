@@ -1,21 +1,16 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { Epilogue } from "next/font/google";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
-import { getMessages } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl";
-import { Epilogue } from "next/font/google";
-import {
-  Icon,
-  Icons,
-  IconURL,
-} from "next/dist/lib/metadata/types/metadata-types";
 
 /**
  * Typy metadanych dla obsługiwanych języków
  */
-interface MetadataLocale {
+interface MetadataLocale extends Metadata {
   title: string;
   description: string;
   openGraph?: {
@@ -24,7 +19,6 @@ interface MetadataLocale {
     url: string;
     locale: string;
   };
-  // icons?: null | IconURL | Array<Icon> | Icons;
 }
 
 /**
@@ -47,6 +41,7 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/pl",
         locale: "pl_PL",
       },
+      icons: { icon: "favicon.png" },
     },
     en: {
       title: "Daria Pyziak Design - Portfolio Graphic design projects",
@@ -59,6 +54,7 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/en",
         locale: "en_US",
       },
+      icons: { icon: "favicon.png" },
     },
   };
 
