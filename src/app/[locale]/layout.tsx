@@ -6,6 +6,11 @@ import { routing } from "../../i18n/routing";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { Epilogue } from "next/font/google";
+import {
+  Icon,
+  Icons,
+  IconURL,
+} from "next/dist/lib/metadata/types/metadata-types";
 
 /**
  * Typy metadanych dla obsługiwanych języków
@@ -19,6 +24,7 @@ interface MetadataLocale {
     url: string;
     locale: string;
   };
+  icons?: null | IconURL | Array<Icon> | Icons;
 }
 
 /**
@@ -41,6 +47,7 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/pl",
         locale: "pl_PL",
       },
+      icons: { icon: "/favicon.ico" },
     },
     en: {
       title: "Daria Pyziak Design - Portfolio Graphic design projects",
@@ -53,6 +60,7 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/en",
         locale: "en_US",
       },
+      icons: { icon: "/favicon.ico" },
     },
   };
 
