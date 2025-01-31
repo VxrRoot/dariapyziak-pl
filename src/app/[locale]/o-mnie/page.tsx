@@ -60,7 +60,7 @@ const OmniePage = async ({ params }: { params: { locale: string } }) => {
           </div>
         </div>
         <div className="flex-1 max-md:my-14">
-          <div className="max-w-[720px] lg:p-20 md:pr-6  max-md:px-5 relative z-10">
+          <div className="max-w-[960px] lg:p-20 md:pr-6  max-md:px-5 relative z-10">
             <h1
               dangerouslySetInnerHTML={{ __html: data.title }}
               className="font-semibold text-4xl lg:text-[47px] leading-tight mb-8 "

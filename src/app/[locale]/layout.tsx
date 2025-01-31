@@ -24,7 +24,7 @@ interface MetadataLocale {
     url: string;
     locale: string;
   };
-  icons?: null | IconURL | Array<Icon> | Icons;
+  // icons?: null | IconURL | Array<Icon> | Icons;
 }
 
 /**
@@ -47,7 +47,6 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/pl",
         locale: "pl_PL",
       },
-      icons: { icon: "/favicon.ico" },
     },
     en: {
       title: "Daria Pyziak Design - Portfolio Graphic design projects",
@@ -60,7 +59,6 @@ export async function generateMetadata({
         url: "https://www.dariapyziakdesign.pl/en",
         locale: "en_US",
       },
-      icons: { icon: "/favicon.ico" },
     },
   };
 

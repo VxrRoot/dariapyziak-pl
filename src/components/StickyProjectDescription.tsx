@@ -40,7 +40,7 @@ const StickyProjectDescription: FC<StickyProjectDescriptionProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`sticky pt-10 flex-1 h-fit max-md:px-5 md:pl-6 lg:pl-16 lg:pr-10 max-w-[720px]`}
+      className={`sticky pt-10 flex-1 h-fit max-md:px-5 md:pl-6 lg:pl-16 lg:pr-10 max-w-[960px]`}
       style={{
         top: overflowData > 0 ? `-${overflowData}px` : "0px",
       }}
