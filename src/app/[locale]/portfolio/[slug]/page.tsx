@@ -1,3 +1,5 @@
+import CustomerFeedback from "@/components/CustomerFeedback";
+import ContainerLayout from "@/layouts/ContainerLayout";
 import { IPortfolio } from "@/lib/interface";
 import { getPortfolio, getPortfolios } from "@/lib/query";
 import { urlFor } from "@/lib/sanity";
@@ -38,7 +40,7 @@ type IPortfolioWithCustomTags = Omit<IPortfolio, "tags"> & {
 const PortfolioPage = async ({
   params,
 }: {
-  params: { slug: string; locale: string };
+  params: { slug: string; locale: "pl" | "en" };
 }) => {
   const portfolioData: IPortfolioWithCustomTags[] = await getPortfolio(
     params.slug,
@@ -74,6 +76,18 @@ const PortfolioPage = async ({
             ))}
           </div>
         </div>
+        <ContainerLayout>
+          {portfolioItem.opinion && (
+            <CustomerFeedback
+              author={{
+                name: portfolioItem.opinion.author.name,
+                role: portfolioItem.opinion.author.role,
+              }}
+              content={portfolioItem.opinion.content}
+              title={portfolioItem.opinion.title[params.locale]}
+            />
+          )}
+        </ContainerLayout>
       </div>
     </main>
   );

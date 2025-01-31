@@ -49,16 +49,19 @@ const StickyProjectDescription: FC<StickyProjectDescriptionProps> = ({
         {tags.map((tag, idx) => (
           <div
             key={`${tag}-${idx}`}
-            className={`pr-6 text-[#F9F7F4] font-normal text-opacity-50 text-sm  whitespace-nowrap ${idx + 1 !== tags.length && "border-r border-white"}`}
+            className={`pr-4 relative text-[#F9F7F4] font-normal text-opacity-50 text-sm  whitespace-nowrap }`}
           >
             {tag}
+            {idx + 1 !== tags.length && (
+              <span className="absolute right-0 h-[11px] w-[1px] bg-[#878685] top-1/2 -translate-y-1/2" />
+            )}
           </div>
         ))}
       </div>
-      <h1 className="text-4xl lg:text-[40px] lg:leading-tight font-semibold">
+      <h1 className="text-4xl lg:text-[40px] lg:leading-tight font-semibold mt-6 mb-[42px]">
         {title}
       </h1>
-      <div className="mt-8 prose max-w-5xl !m-0 !p-0 [&>h6]:mb-3 [&>h6]:mt-6 [&>h6]:opacity-50 prose-invert text-[#c4c4c4] font-light prose-lg [&>ul]:my-6  mx-auto flex flex-col [&>ul]:list-disc [&>ul]:list-outside [&>ul>li]:ml-4">
+      <div className=" prose max-w-5xl !m-0 !p-0 [&>h6]:mb-3 [&>h6]:mt-6 [&>h6]:opacity-50 prose-invert text-[#c4c4c4] font-light prose-lg [&>ul]:my-6  mx-auto flex flex-col [&>ul]:list-disc [&>ul]:list-outside [&>ul>li]:ml-4">
         <PortableText
           value={content}
           components={{

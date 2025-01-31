@@ -65,7 +65,7 @@ const OmniePage = async ({ params }: { params: { locale: string } }) => {
               dangerouslySetInnerHTML={{ __html: data.title }}
               className="font-semibold text-4xl lg:text-[47px] leading-tight mb-8 "
             />
-            <div className="[&>h2]:font-bold [&>h2]:mb-2 [&>p]:mb-8 font-light text-base leading-tight [&>h2]:text-lg">
+            <div className="[&>h2]:font-bold [&>h2]:mb-2 [&>p]:mb-8 font-light text-[13px] leading-tight [&>h2]:text-[14px]">
               <PortableText value={data.content} />
             </div>
             <div className="mt-10">

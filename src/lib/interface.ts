@@ -13,4 +13,15 @@ export interface IPortfolio {
   images: any[];
   titleImage: any;
   content: any;
+  opinion: {
+    author: {
+      name: string;
+      role: string;
+    };
+    content: any;
+    title: {
+      pl: string;
+      en: string;
+    };
+  };
 }

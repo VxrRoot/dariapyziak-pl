@@ -67,7 +67,8 @@ export async function getPortfolio(slug: string, lang: string) {
       "caption": coalesce(caption[$lang], "Default caption") // Podpis w wybranym języku
     },
     slug,
-    public
+    public,
+    opinion
   }`;
 
   const params = { slug, lang };

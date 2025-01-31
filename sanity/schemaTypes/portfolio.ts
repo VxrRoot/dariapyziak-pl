@@ -81,6 +81,44 @@ export default {
         },
       ],
     },
+    {
+      name: 'opinion',
+      type: 'object',
+      title: 'Opinia',
+      fields: [
+        {
+          name: 'title',
+          type: 'localeString',
+          title: 'Tytuł',
+        },
+        {
+          name: 'content',
+          type: 'object',
+          fields: [
+            {
+              name: 'pl',
+              type: 'array',
+              title: 'PL treść opinii',
+              of: [{type: 'block'}], // Treść w języku polskim
+            },
+            {
+              name: 'en',
+              type: 'array',
+              title: 'EN treść opinii',
+              of: [{type: 'block'}], // Treść w języku angielskim
+            },
+          ],
+        },
+        {
+          name: 'author',
+          type: 'object',
+          fields: [
+            {name: 'name', type: 'string', title: 'Nazwa'},
+            {name: 'role', type: 'string', title: 'Rola'},
+          ],
+        },
+      ],
+    },
   ],
   preview: {
     select: {

@@ -1,5 +1,5 @@
 {
-  "heroTitle": "Wzrost marki dzięki <br /> przemyślanemu projektowi",
+  "heroTitle": "Przemyślany design, <br /> który wzmocni Twoją markę",
   "nav": {
     "portfolio": "Portfolio",
     "about": "O mnie",
@@ -18,5 +18,6 @@
   },
   "aboutMe": {
     "seeMoreOnLinkedin": "Zobacz więcej na Linkedin"
-  }
+  },
+  "opinion": "Opinia klienta dot. projektu"
 }

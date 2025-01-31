@@ -38,7 +38,7 @@ export async function generateMetadata({
         title: "Daria Pyziak Design - Portfolio Projekty graficzne",
         description:
           "Zaprojektujmy Twoją markę. Branding. Logo. Strony internetowe. Aplikacje. Materiały drukowane. Grafiki.",
-        url: "https://www.dariapyziakdesign.pl/",
+        url: "https://www.dariapyziakdesign.pl/pl",
         locale: "pl_PL",
       },
     },
@@ -50,7 +50,7 @@ export async function generateMetadata({
         title: "Daria Pyziak Design - Portfolio Graphic design projects",
         description:
           "Let's design your brand. Branding. Logos. Websites. Applications. Printed materials. Graphics.",
-        url: "https://www.dariapyziakdesign.pl/",
+        url: "https://www.dariapyziakdesign.pl/en",
         locale: "en_US",
       },
     },

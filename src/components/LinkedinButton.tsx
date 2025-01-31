@@ -11,7 +11,9 @@ const LinkedinButton = () => {
       target="_blank"
       className="bg-black text-white flex items-center px-4 py-3 space-x-4 w-fit"
     >
-      <span className="leading-none">{t("aboutMe.seeMoreOnLinkedin")}</span>
+      <span className="leading-none mt-1">
+        {t("aboutMe.seeMoreOnLinkedin")}
+      </span>
       <LinkedinIcon color="#FFFFFF" />
     </a>
   );
