@@ -9,6 +9,8 @@ import { urlFor } from "@/lib/sanity";
 import { redirect } from "next/navigation";
 import { Metadata } from "next";
 
+export const revalidate = 300;
+
 export async function generateMetadata({
   params: { locale },
 }: {
