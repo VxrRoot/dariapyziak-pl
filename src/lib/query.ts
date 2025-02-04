@@ -14,7 +14,7 @@ export async function getPortfolios() {
           }`;
 
   // @ts-ignore
-  const data = await client.fetch(query, {}, { cache: "force-cache" });
+  const data = await client.fetch(query, {}, { next: { revalidate: 300 } });
 
   return data;
 }
