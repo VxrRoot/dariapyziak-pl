@@ -2,8 +2,6 @@ import PortfolioCardItem from "@/components/PortfolioCardItem";
 import { IPortfolio } from "@/lib/interface";
 import { getPortfolios } from "@/lib/query";
 
-export const revalidate = 300;
-
 const PortfolioSection = async () => {
   const portfolios = await getPortfolios();
 
