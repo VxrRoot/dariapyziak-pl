@@ -77,14 +77,14 @@ const PortfolioPage = async ({
           </div>
         </div>
         <ContainerLayout>
-          {portfolioItem.opinion && (
+          {portfolioItem.opinion?.content?.[params.locale] && (
             <CustomerFeedback
               author={{
-                name: portfolioItem.opinion.author.name,
-                role: portfolioItem.opinion.author.role,
+                name: portfolioItem.opinion.author?.name ?? "",
+                role: portfolioItem.opinion.author?.role ?? "",
               }}
               content={portfolioItem.opinion.content}
-              title={portfolioItem.opinion.title[params.locale]}
+              title={portfolioItem.opinion.title?.[params.locale] ?? ""}
             />
           )}
         </ContainerLayout>
